@@ -22,7 +22,7 @@ var storage = multer.diskStorage({
  });
  var upload = multer({ storage: storage });
 
-const port = 9000;
+const port = process.env.PORT || 9000;
 
 const model = await tf.loadGraphModel('https://raw.githubusercontent.com/yuvaraj11-01/Cassava-Leaf-Disease-Classification-model/main/TFJS_files/model.json');
 
